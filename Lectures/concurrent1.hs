@@ -20,32 +20,27 @@ calcA = a + b
     where a = calculation 1
           b = calculation 2
 
-
 calcB = (a `par` b) `pseq` (a + b)
     where a = calculation 1
           b = calculation 2
 
+-- ./concurrent1  real	18.30s user	18.06s sys	0.17s for calcA
+-- ./concurrent1  real	9.40s user	18.27s sys	0.14s for calcB
 
 calcC = map slowCalc [0..100]
-
 calcD = parMap rseq slowCalc [0..100]
 
+-- ./concurrent1  real	18.62s user	18.34s sys	0.09s for calcC
+-- ./concurrent1  real	5.65s user	19.16s sys	0.12s for calcD
 
 calcE = map fastCalc [0..1000000]
 calcF = parMap rseq fastCalc [0..1000000]
 
+-- ./concurrent1  real	19.09s user	18.46s sys	0.19s for calcE
+-- ./concurrent1  real	19.70s user	19.06s sys	0.31s for calcF
 
 
 
 
 main :: IO ()
 main = print $ calcE
-
--- ./concurrent1  real	18.30s user	18.06s sys	0.17s for calcA
--- ./concurrent1  real	9.40s user	18.27s sys	0.14s for calcB
-
--- ./concurrent1  real	18.62s user	18.34s sys	0.09s for calcC
--- ./concurrent1  real	5.65s user	19.16s sys	0.12s for calcD
-
--- ./concurrent1  real	19.09s user	18.46s sys	0.19s for calcE
--- ./concurrent1  real	19.70s user	19.06s sys	0.31s for calcF
