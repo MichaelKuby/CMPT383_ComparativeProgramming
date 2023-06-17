@@ -12,15 +12,6 @@ import Data.Char        ( ord )
 type Hash = Int32
 type Passwd = String
 
--- Parameters
-pwLength, nLetters, width, height :: Int
-filename :: FilePath
-pwLength = 8            -- length of each password
-nLetters = 5            -- nuber of letters to use in passwords: 5 -> a-e
-width = 40              -- length of each chain in the table
-height = 1000           -- number of "rows" in the table
-filename = "table.txt"  -- filename to store the table
-
 -- hashString function from GHC's Data.HashTable (adapted from file libraries/base/Data/HashTable.hs in GHC source)
 hashString :: String -> Int32
 hashString = foldl' f golden
@@ -38,19 +29,6 @@ hashString = foldl' f golden
 -- the password hashing function
 pwHash :: Passwd -> Hash
 pwHash = hashString
-
-pwReduce :: Hash -> [Char]
-pwReduce hash = reverse . digitsToLetters $ take pwLength $ convertToBase hash nLetters
-  where
-    convertToBase :: Int32 -> Int -> [Int]
-    convertToBase num base = fromIntegral (num `mod` fromIntegral base) : convertToBase (num `div` fromIntegral base) base
-
-    intToLetter :: Int -> Char
-    intToLetter n = ['a'..'z'] !! n
-
-    digitsToLetters :: [Int] -> String
-    digitsToLetters = map intToLetter
-
 
 -- return a list of n values from a..b (inclusive)
 randomList :: (Random t) => (t, t) -> Int -> IO [t]
@@ -92,6 +70,3 @@ readTable fn = do
   tableStr <- readFile fn
   let tableData = read tableStr
   return (Map.fromList tableData)
-
-
-
