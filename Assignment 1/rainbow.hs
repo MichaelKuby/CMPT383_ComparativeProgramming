@@ -1,5 +1,5 @@
 import RainbowAssign
-
+import Data.Maybe (listToMaybe)
 import qualified Data.Map as Map
 import Data.Int (Int32)
 
@@ -15,7 +15,7 @@ filename = "table.txt"  -- filename to store the table
 pwReduce :: Hash -> [Char]
 pwReduce hash = reverse . digitsToLetters $ take pwLength $ convertToBase hash nLetters
   where
-    convertToBase :: Int32 -> Int -> [Int]
+    convertToBase :: Hash -> Int -> [Int]
     convertToBase num base = fromIntegral (num `mod` fromIntegral base) : convertToBase (num `div` fromIntegral base) base
 
     intToLetter :: Int -> Char
@@ -31,7 +31,7 @@ rainbowTable numChains pwords = Map.fromList $ zip (mapChainHash numChains pword
         mapChainReduce 0 passwords = passwords
         mapChainReduce n passwords = mapChainReduce (n-1) (map (pwReduce . pwHash) passwords)
 
-        mapChainHash :: Int -> [String] -> [Int32]
+        mapChainHash :: Int -> [String] -> [Hash]
         mapChainHash 0 passwords = map pwHash $ mapChainReduce 0 passwords
         mapChainHash n passwords = map pwHash $ mapChainReduce n passwords
 
@@ -40,9 +40,19 @@ generateTable = do
     table <- buildTable rainbowTable nLetters pwLength width height
     writeTable table filename
 
-test1 :: IO (Maybe Passwd)
-test1 = do
-    table <- readTable filename
-    return (Map.lookup 0 table)
+-- Code for findPassword begins
 
---findPassword :: rainbowTable -> 
+-- Lookup if a hash value is in the table
+lookup :: Hash -> IO (Maybe Passwd)
+lookup hash = do
+    table <- readTable filename
+    return (Map.lookup hash table)
+
+-- Take a hash, reduce, and rehash.
+reduceAndHash :: Hash -> Hash
+reduceAndHash = pwHash . pwReduce
+
+
+
+--findPassword :: Map.Map Hash Passwd -> Int -> Hash -> Maybe Passwd
+
