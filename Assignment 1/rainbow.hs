@@ -1,7 +1,12 @@
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Replace case with maybe" #-}
+{-# HLINT ignore "Use if" #-}
+{-# HLINT ignore "Eta reduce" #-}
 import RainbowAssign
-import Data.Maybe (listToMaybe)
+    ( Passwd, Hash, pwHash, buildTable, writeTable, readTable, randomPasswords )
 import qualified Data.Map as Map
-import Data.Int (Int32)
+import Data.Maybe ( catMaybes, isJust, isNothing )
+import qualified Data.Maybe as Maybe
 
 -- Parameters
 pwLength, nLetters, width, height :: Int
@@ -26,7 +31,7 @@ pwReduce hash = reverse . digitsToLetters $ take pwLength $ convertToBase hash n
 
 rainbowTable :: Int -> [Passwd] -> Map.Map Hash Passwd
 rainbowTable numChains pwords = Map.fromList $ zip (mapChainHash numChains pwords) pwords
-    where 
+    where
         mapChainReduce :: Int -> [String] -> [String]
         mapChainReduce 0 passwords = passwords
         mapChainReduce n passwords = mapChainReduce (n-1) (map (pwReduce . pwHash) passwords)
@@ -40,19 +45,46 @@ generateTable = do
     table <- buildTable rainbowTable nLetters pwLength width height
     writeTable table filename
 
--- Code for findPassword begins
-
--- Lookup if a hash value is in the table
-lookup :: Hash -> IO (Maybe Passwd)
-lookup hash = do
-    table <- readTable filename
-    return (Map.lookup hash table)
-
--- Take a hash, reduce, and rehash.
 reduceAndHash :: Hash -> Hash
 reduceAndHash = pwHash . pwReduce
 
+hashAndReduce :: Passwd -> Passwd
+hashAndReduce = pwReduce . pwHash
 
+-- From [Maybe Passwd], drop all 'Nothing' values
+validPasswords :: [Maybe Passwd] -> [Passwd]
+validPasswords = catMaybes
 
---findPassword :: Map.Map Hash Passwd -> Int -> Hash -> Maybe Passwd
+-- From [Passwd], if empty, return nothing, else, return first elem as Maybe.
+maybeOrNothing :: [Passwd] -> Maybe Passwd
+maybeOrNothing [] = Nothing
+maybeOrNothing [x] = Just x
+maybeOrNothing (_:x:_) = Just x
 
+extractValuesForKey :: Map.Map Hash Passwd -> [Maybe Passwd]
+extractValuesForKey table = [Map.lookup h table | h <- Map.keys table]
+
+findPassword :: Map.Map Hash Passwd -> Int -> Hash -> Maybe Passwd
+findPassword table chainLen hash = case extractValuesForKey table of
+    []      |   chainLen > 0 -> findPassword table (chainLen - 1) (reduceAndHash hash)
+            |   otherwise -> Nothing
+    pwvals  |   all isNothing pwvals && chainLen > 0 -> findPassword table (chainLen - 1) (reduceAndHash hash)
+            |   all isNothing pwvals && chainLen <= 0 -> Nothing
+            |   any isJust pwvals -> maybeOrNothing $ validPasswords $ map (passwordChainLookup width hash) pwvals
+
+passwordChainLookup :: Int -> Hash -> Maybe Passwd -> Maybe Passwd
+passwordChainLookup (-1) _ _ = Nothing
+passwordChainLookup n hash pw = passwordChainLookup' n pw hash
+    where
+        passwordChainLookup' :: Int -> Maybe Passwd -> Hash -> Maybe Passwd
+        passwordChainLookup' num pword h
+            | (pwHash <$> pword) == Just h = pword
+            | otherwise = passwordChainLookup (num-1) h (hashAndReduce <$> pword)
+
+test2 :: Int -> IO ([Passwd], Int)
+test2 n = do
+  table <- readTable filename
+  pws <- randomPasswords nLetters pwLength n
+  let hs = map pwHash pws
+  let result = Maybe.mapMaybe (findPassword table width) hs
+  return (result, length result)

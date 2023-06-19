@@ -70,3 +70,6 @@ readTable fn = do
   tableStr <- readFile fn
   let tableData = read tableStr
   return (Map.fromList tableData)
+
+
+
