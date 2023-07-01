@@ -1,0 +1,71 @@
+Language: Java 17
+
+Programming paradigm: Imperative, Object Oriented
+
+As a "Write once, run anywhere" language it is intended to be compiled to bytecode, 
+then run on any Java virtual machine, regardless of the underlying architecture.
+
+Java is statically typed as it demands that variable types be explicitly declared.
+
+Java uses a mixture of static and dynamic binding. For example, certain classes
+extend other classes, inheriting their methods and attributes, and perhaps 
+overloading their methods with alternate functionality. This dynamic allows for
+polymorphism, whereby an object may come from a more specific or more general 
+class type, and this cannot be resolved until run-time. In these situations,
+dynamic binding is utilized. Static binding, on the other happen, is used for
+static methods, final methods and private methods.
+
+Java is a strongly typed language. All variables, objects, and method parameters
+must be declared with a specific type. The Java compiler enforces these through
+type checking to make sure that only operations compatible with the type are performed.
+
+Java has automatic garbage collection. It's the responsibility of the Java runtime
+environment to free memory allocated to the heap once objects are no longer accessible. 
+Java 17 uses the G1 (Garbage First) garbage collector.
+
+Java 17 supports higher-order functions, nested functions, closures, and lambda
+expressions, and as such can be considered to have first-class functions.
+
+Java 17 has a variety of support for concurrent and parallel programming. Concurrent 
+support tools include thread creation, thread synchronization (to ensure thread-safe
+access to shared resources), and threadPools. Parallel support includes Parallel 
+Streams, which allow you to operate over collections in parallel, as well as the 
+Fork/Join framework, which provides parallel programming by splitting a large task
+into smaller subtasks that can be executed in parallel, and their results combined.
+
+
+Language: Python 3.11
+
+Programming paradigm: Imperative, Object Oriented, while including aspects of functional
+languages
+
+Python is an interpreted language. Written source code is converted into bytecode, which
+is then executed by the Python Virtual Machine. 
+
+Python is a dynamically typed language. Variables are not assigned specific types during
+declaration, and variables are free to hold different types at different points during a
+programs execution.
+
+Python makes use of dynamic binding. Class heirarchies can be created such that subclasses
+override methods of superclasses. In these situations, the appropriate implementation
+is determined dynamically based on the actual object type at the time of execution. This 
+functionality is notably similar to Java as described above.
+
+Python is a strongly typed language since it ensures that operations are performed only
+with compatible types. If operations are attempted with incompatible types, type-errors
+will arise.
+
+Python has automatic garbage collection. The main algorithm used is reference counting.
+The idea behind reference counting is to keep track of how many references an object has:
+once that number becomes zero, the memory for that object is deallocated.
+
+Python supports first class functions. You are able to assign functions to variables,
+pass functions as arguments, return functions from functions, etc. It also supports
+closures, lambda expressions, higher order functions, and partial application.
+
+Python 3.11 also has a variety of tools available for concurrent and parallel programming.
+The Multiprocessing modules enables the execution of multiple threads in parallel (making
+use of multiple cores). The threading module allows users to create threads (for 
+concurrent execution, and usually for I/O bound tasks). The concurrent.futures module 
+provides a way to make use of thread pools. In addition, Python gives users access
+to NumPy and Pandas, which internally utilize C code for performance.

@@ -1,5 +1,5 @@
-import Data.Time.Calendar
-import Data.Time.Calendar.OrdinalDate
+import Data.Time.Calendar ( Day, fromGregorian, toGregorian )
+import Data.Time.Calendar.OrdinalDate ( Day, mondayStartWeek )
 
 merge :: Ord a => [a] -> [a] -> [a]
 merge [] [] = []
@@ -15,7 +15,7 @@ splitInTwo xs = splitAt (length xs `div` 2) xs
 mergeSort :: Ord a => [a] -> [a]
 mergeSort [] = []
 mergeSort [x] = [x]
-mergeSort xs = 
+mergeSort xs =
     let (leftSide, rightSide) = splitInTwo xs
     in merge (mergeSort leftSide) (mergeSort rightSide)
 
@@ -33,9 +33,9 @@ divisors :: Int -> [Int]
 divisors n = [i | i <- [2..(n `div` 2)], n `mod` i == 0]
 
 isPrime :: Int -> Bool
-isPrime n 
+isPrime n
     | n == 1            = False
-    | divisors n == []  = True
+    | null (divisors n)  = True
     | otherwise         = False
 
 isPrimeDay :: Day -> Bool
@@ -44,6 +44,6 @@ isPrimeDay day = isPrime d
 
 primeFridays :: Integer -> [Day]
 primeFridays year = filter primeFridays' (daysInYear year)
-    where 
+    where
         primeFridays' :: Day -> Bool
         primeFridays' day = isFriday day && isPrimeDay day

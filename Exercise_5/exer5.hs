@@ -1,4 +1,4 @@
-import Data.Ratio
+import Data.Ratio ( Ratio, (%) )
 
 myIterate :: (a -> a) -> a -> [a]
 myIterate f x = x : myIterate' f x
