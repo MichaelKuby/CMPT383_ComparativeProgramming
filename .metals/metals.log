@@ -197,3 +197,56 @@ WARNING: Unmatched cancel notification for request id 6561
 2023.07.06 15:39:07 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
 2023.07.06 15:39:20 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
 2023.07.06 15:39:37 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:40:58 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:41:25 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:43:11 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:45:08 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:46:28 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:46:40 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:47:29 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:47:52 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:49:06 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:49:35 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:50:08 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:50:29 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:50:58 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:51:01 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 15:53:43 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+Jul. 06, 2023 4:57:05 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.07.06 16:57:49 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 16:57:54 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 16:58:44 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/ExerciseQuestions.scala
+2023.07.06 16:58:47 ERROR text document: file:///Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment%202/assignment-2/src/main/scala/Main.scala
+java.nio.file.NoSuchFileException: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.nio.file.Files.readAllBytes(Files.java:3288)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$2(InteractiveSemanticdbs.scala:90)
+	at scala.Option.getOrElse(Option.scala:201)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$1(InteractiveSemanticdbs.scala:90)
+	at java.util.HashMap.compute(HashMap.java:1316)
+	at java.util.Collections$SynchronizedMap.compute(Collections.java:2770)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:89)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:63)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$codeLens$2(MetalsLspService.scala:1780)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$codeLens$1(MetalsLspService.scala:1778)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.07.06 16:58:56 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/ExerciseQuestions.scala
+2023.07.06 16:59:01 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/ExerciseQuestions.scala

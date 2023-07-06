@@ -5,37 +5,40 @@ import java.time.format.DateTimeFormatter
 @main def main: Unit =
     // Test divisors function
     val n = 10
-    println(divisors(n))
+    println(s"${n} has divisors: " + divisors(n) + "\n")
 
     // Test primes function
-    println(primes(n))
+    println(s"A list of prime numbers from 0 up to ${n}: " + primes(n) + "\n")
 
     // Test pythagorean function
-    println(pythagorean(30))
+    val c = 30
+    println(s"Given c = ${c}, here are all triples (a, b, c) such that a^2 + b^2 = c^2: " + pythagorean(c) + "\n")
 
     // Test merge function
     val list1 = List(1, 3, 5)
     val list2 = List(2, 4, 6)
     val mergedList = merge(list1, list2)
-    println(mergedList)
+    println(s"Given ${list1}, ${list2}, their merger is " + mergedList + "\n")
 
     // Test mergeSort function
     val unsortedList = List(9, 4, 7, 2, 1, 5, 3, 6, 8)
     val sortedList = mergeSort(unsortedList)
-    println(sortedList)
+    println(s"Given an unsorted list, ${unsortedList}, after merge sort we have: " + sortedList + "\n")
 
     // Test isFriday function
     val dateToCheck = LocalDate.of(1988, 3, 1)     // My year and date of birth. Should be a Tuesday.
     val isFriday1988 = isFriday(dateToCheck)  
-    println("Is March 1, 1988, a Friday? " + isFriday1988)
+    println("Is March 1, 1988, a Friday? " + isFriday1988 + "\n")
 
     val dateToCheck2 = LocalDate.of(1988, 3, 4)     // Should be a Friday
     val isFriday19882 = isFriday(dateToCheck2)       
-    println("Is March 4, 1985, a Friday? " + isFriday19882)
+    println("Is March 4, 1985, a Friday? " + isFriday19882 + "\n")
 
     // Test isPrime function
-    val x = 4
-    println(isPrime(x))
+    var x = 4
+    println(s"Is ${x} prime? " + isPrime(x) + "\n")
+    x = 13
+    println(s"Is ${x} prime? " + isPrime(x) + "\n")
 
     // Test isPrimeDay function
     val testDates = List(
@@ -47,7 +50,7 @@ import java.time.format.DateTimeFormatter
 
     testDates.foreach(date => {
     val isPrimeDayResult = isPrimeDay(date)
-      println(s"${date} is a prime day: " + isPrimeDayResult)
+      println(s"${date} is a prime day: " + isPrimeDayResult + "\n")
       })
 
 def divisors(n: Int): List[Int] =

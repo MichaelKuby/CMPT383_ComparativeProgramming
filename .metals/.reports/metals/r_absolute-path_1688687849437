@@ -1,0 +1,4 @@
+Uri: git:<WORKSPACE>/Assignment%202/assignment-2/src/main/scala/Main.scala?%7B%22path%22%3A%22%2FUsers%2FMichaelKuby%2FDocuments%2FGitHub%2FCMPT383_ComparativeProgramming%2FAssignment%202%2Fassignment-2%2Fsrc%2Fmain%2Fscala%2FMain.scala%22%2C%22ref%22%3A%22~%22%7D
+
+Error message: Provider "git" not installed
+Error: java.nio.file.FileSystemNotFoundException: Provider "git" not installed
