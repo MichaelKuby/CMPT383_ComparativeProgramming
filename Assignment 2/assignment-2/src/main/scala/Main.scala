@@ -1,4 +1,6 @@
 import scala.math
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 @main def main: Unit =
     // Test divisors function
@@ -21,6 +23,32 @@ import scala.math
     val unsortedList = List(9, 4, 7, 2, 1, 5, 3, 6, 8)
     val sortedList = mergeSort(unsortedList)
     println(sortedList)
+
+    // Test isFriday function
+    val dateToCheck = LocalDate.of(1988, 3, 1)     // My year and date of birth. Should be a Tuesday.
+    val isFriday1988 = isFriday(dateToCheck)  
+    println("Is March 1, 1988, a Friday? " + isFriday1988)
+
+    val dateToCheck2 = LocalDate.of(1988, 3, 4)     // Should be a Friday
+    val isFriday19882 = isFriday(dateToCheck2)       
+    println("Is March 4, 1985, a Friday? " + isFriday19882)
+
+    // Test isPrime function
+    val x = 4
+    println(isPrime(x))
+
+    // Test isPrimeDay function
+    val testDates = List(
+      LocalDate.of(2023, 7, 2),   // Prime day
+      LocalDate.of(2023, 7, 3),   // Not prime day
+      LocalDate.of(2023, 7, 5),   // Prime day
+      LocalDate.of(2023, 7, 8)    // Not prime day
+    )
+
+    testDates.foreach(date => {
+    val isPrimeDayResult = isPrimeDay(date)
+      println(s"${date} is a prime day: " + isPrimeDayResult)
+      })
 
 def divisors(n: Int): List[Int] =
   val numbers = (2 to n / 2).toList
@@ -64,3 +92,19 @@ def mergeSort[A](xs: List[A])(implicit ord: Ordering[A]): List[A] = xs match
   def splitInTwo[A](xs: List[A]): (List[A], List[A]) = 
     val midpoint = xs.length / 2  // get the midpoint
     xs.splitAt(midpoint)          // split at the midpoint
+
+  // isFriday takes a Java LocalDate object and 
+  // returns true if the given date is a Friday
+  def isFriday(date: LocalDate): Boolean = 
+    val formatter = DateTimeFormatter.ofPattern("EEEE")   // Requests the full name of the week
+    val dayToString = date.format(formatter)  // extract the day as string
+    if dayToString == "Friday" then true else false
+
+  def isPrime(n: Int): Boolean = 
+    if n == 1 then false
+    else if divisors(n) == Nil then true 
+    else false
+
+  def isPrimeDay(date: LocalDate): Boolean =
+    val dayOfMonth = date.getDayOfMonth()
+    isPrime(dayOfMonth)
