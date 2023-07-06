@@ -1,0 +1,159 @@
+2023.07.04 21:26:33 INFO  Started: Metals version 0.11.12 in workspace '/Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming' for client Visual Studio Code 1.79.2.
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:/Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/.metals/metals (H2 2.1)
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.014s)
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+Jul. 04, 2023 9:26:33 P.M. org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.055s)
+2023.07.04 21:26:33 INFO  time: initialize in 0.56s
+2023.07.04 21:26:35 WARN  Build server is not auto-connectable.
+2023.07.04 21:26:35 WARN  no build tool detected in workspace '/Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.07.04 21:29:59 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/hello-world/src/main/scala/Main.scala
+2023.07.04 21:30:10 INFO  no build target found for /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/hello-world/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.07.04 21:30:11 INFO  time: code lens generation in 12s
+2023.07.04 21:30:26 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/hello-world/build.sbt
+2023.07.04 21:30:52 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/hello-world/build.sbt
+2023.07.04 21:32:29 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/hello-world/src/main/scala/Main.scala
+2023.07.06 10:35:11 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 10:48:12 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 10:49:24 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 10:51:44 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 10:51:52 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 10:55:38 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 10:56:05 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 10:56:46 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+Jul. 06, 2023 10:56:49 A.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1156
+2023.07.06 10:56:49 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 10:56:49 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 10:57:43 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 10:57:54 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:00:37 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:01:11 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:01:11 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:03:12 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:03:28 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:05:15 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:05:42 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:06:13 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:06:24 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+Jul. 06, 2023 11:08:34 A.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1781
+2023.07.06 11:10:30 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:11:12 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:11:35 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:45:38 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:48:11 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:48:23 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+Jul. 06, 2023 11:48:23 A.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor15.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: file:///Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment%202/assignment-2/src/main/scala/Main.scala:34: error: unclosed character literal
+pythagorean' :: (Int, Int, Int) -> Bool
+           ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchSingleQuote$1(LegacyScanner.scala:440)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:445)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:246)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.loop(ScalaToplevelMtags.scala:382)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.indexRoot(ScalaToplevelMtags.scala:53)
+	at scala.meta.internal.mtags.MtagsIndexer.index(MtagsIndexer.scala:19)
+	at scala.meta.internal.mtags.MtagsIndexer.index$(MtagsIndexer.scala:18)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.index(ScalaToplevelMtags.scala:41)
+	at scala.meta.internal.mtags.Mtags$.allToplevels(Mtags.scala:100)
+	at scala.meta.internal.metals.DefinitionProvider.fromMtags(DefinitionProvider.scala:371)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$positionOccurrence$3(DefinitionProvider.scala:291)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$positionOccurrence$1(DefinitionProvider.scala:291)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.DefinitionProvider.positionOccurrence(DefinitionProvider.scala:286)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$definitionOrReferences$1(MetalsLspService.scala:2693)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.MetalsLspService.definitionOrReferences(MetalsLspService.scala:2689)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$definition$1(MetalsLspService.scala:1526)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLspService.definition(MetalsLspService.scala:1525)
+	at scala.meta.metals.lsp.DelegatingScalaService.definition(DelegatingScalaService.scala:69)
+	... 15 more
+
+2023.07.06 11:48:37 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:57:06 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:57:19 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:57:40 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:58:06 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 11:58:18 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:00:07 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:00:42 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:00:46 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:00:51 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:00:52 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+Jul. 06, 2023 12:01:07 P.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4050
+2023.07.06 12:01:10 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:01:15 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:01:24 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:02:35 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:02:55 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:15:10 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:15:23 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:21:52 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:22:52 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:25:22 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:26:23 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:26:58 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:27:31 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+Jul. 06, 2023 12:32:22 P.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5823
+2023.07.06 12:36:49 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:37:08 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:37:49 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:37:58 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:38:14 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:40:12 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+Jul. 06, 2023 12:40:38 P.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6561
+2023.07.06 12:40:58 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
+2023.07.06 12:43:48 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/assignment-2/src/main/scala/Main.scala
