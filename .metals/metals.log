@@ -637,3 +637,59 @@ INFO: Schema "PUBLIC" is up to date. No migration necessary.
 2023.07.07 20:17:44 INFO  Shutting down server
 2023.07.07 20:17:44 INFO  shutting down Metals
 2023.07.07 20:17:44 INFO  Exiting server
+2023.07.09 11:32:47 INFO  Started: Metals version 0.11.12 in workspace '/Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming' for client Visual Studio Code 1.80.0.
+Jul. 09, 2023 11:32:48 A.M. org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+Jul. 09, 2023 11:32:48 A.M. org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+Jul. 09, 2023 11:32:48 A.M. org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+Jul. 09, 2023 11:32:48 A.M. org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:/Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/.metals/metals (H2 2.1)
+Jul. 09, 2023 11:32:48 A.M. org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.068s)
+Jul. 09, 2023 11:32:48 A.M. org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+Jul. 09, 2023 11:32:48 A.M. org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.07.09 11:32:49 INFO  time: initialize in 1.12s
+2023.07.09 11:32:51 WARN  Build server is not auto-connectable.
+2023.07.09 11:32:51 WARN  no build tool detected in workspace '/Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.07.09 11:32:51 WARN  no build target for: /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/OtherPrograms/src/main/scala/Main.scala
+2023.07.09 11:32:56 INFO  Shutting down server
+2023.07.09 11:32:56 INFO  shutting down Metals
+2023.07.09 11:32:58 INFO  no build target found for /Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Assignment 2/OtherPrograms/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.2.2
+Jul. 09, 2023 11:32:59 A.M. org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:/Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/.metals/metals (H2 2.1)
+Jul. 09, 2023 11:32:59 A.M. org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.003s)
+Jul. 09, 2023 11:32:59 A.M. org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+Jul. 09, 2023 11:32:59 A.M. org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@42ff8ed1[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 89]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@42ff8ed1[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 90]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
