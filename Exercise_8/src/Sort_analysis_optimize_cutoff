@@ -1,0 +1,21 @@
+Cutoff = 0
+
+Sorting/quicksort       time:   [1.0785 ms 1.0801 ms 1.0821 ms]
+
+Cutoff = 20
+
+Sorting/quicksort       time:   [632.20 µs 634.29 µs 636.93 µs]
+                        change: [-48.293% -48.087% -47.883%] (p = 0.00 < 0.05)
+                        Performance has improved.
+
+Cutoff = 50
+
+Sorting/quicksort       time:   [606.14 µs 610.55 µs 618.06 µs]
+                        change: [-4.3432% -3.7394% -2.8293%] (p = 0.00 < 0.05)
+                        Performance has improved.
+
+Cutoff = 100
+
+Sorting/quicksort       time:   [632.40 µs 634.31 µs 636.59 µs]
+                        change: [+3.6847% +4.6283% +5.3647%] (p = 0.00 < 0.05)
+                        Performance has regressed.

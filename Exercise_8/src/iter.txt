@@ -1,0 +1,70 @@
+
+fn into_iter(self) -> Self::IntoIter {
+        self.iter()
+    }
+
+.into_iter() takes self by value and so iterates over T. Thus, the collection it
+iterates over is consumed.
+
+.into_iter() returns an iterator of type IntoIter<T>. When the iteration is
+complete, the calling function where the collection originated will no longer
+have access to the collection.
+
+.into_iter() returns values of type T.
+
+It would make sense to use into_iter when we want to move, instead of borrow, the
+value. The word into here signals that T is being moved. It probably makes sense to
+use into_iter when a function is transforming some values.
+
+
+.iter()
+
+.iter() takes a reference to self (&self) and iterates over &T. This is akin to
+having access to the slice of the array. The collection is not consumed after
+being iterated over, so the calling function retains ownership over the collection.
+
+.iter() returns an iterator that produces shared referenced to the elements
+of the vector.
+
+.iter() returns elements of type &T. They are immutable.
+
+It makes sense to use iter() if you want to iterate over the values by reference.
+We might do this if we are just looking at the data, or using the values contained
+for some computation.
+
+
+.iter_mut()
+
+.iter_mut() takes a mutable reference to self (mut &self) and iterates over mut &T.
+The collection is not consumed after being iterated over, and the elements of the
+collection may be modified.
+
+.iter_mut() returns a reference to an iterator that produces mutable references
+to T, i.e., mut &T.
+
+.iter_mut() returns elements of type mut &T. This means we can mutate the
+values of the original elements.
+
+Since iter_mut allows for mutable references to the original values, it makes sense
+to use when we want to iterate through a collection and change the values. Since we
+are changing the values, we should be sure that we do not need the original
+collection.
+
+
+.drain(..)
+
+.drain(..) takes a mutable reference to self (mut &self). I.e., it mutably-borrow's
+self.
+
+It returns all removed elements as an iterator.
+
+The values produced by the iterator will be the same type as those from the original
+collection. That is, if the original collection has items of type T, then the
+items of the newly formed collection will be of type T as well.
+
+.drain(..) would make sense to use when we want to partition a collection into
+two. For example, if we have one large collection of numbers, and we
+want to separate all numbers lower than some value x into one collection, and leave
+all numbers greater than or equal to x in the original collection, it would make
+sense to use .drain(..) because it removes the elements from the original collection
+and builds a new collection from the values that have been "drained."
