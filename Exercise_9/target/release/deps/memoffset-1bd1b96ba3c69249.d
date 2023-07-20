@@ -1,0 +1,10 @@
+/Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Exercise_9/target/release/deps/memoffset-1bd1b96ba3c69249.rmeta: /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/lib.rs /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/raw_field.rs /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/offset_of.rs /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/span_of.rs
+
+/Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Exercise_9/target/release/deps/libmemoffset-1bd1b96ba3c69249.rlib: /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/lib.rs /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/raw_field.rs /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/offset_of.rs /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/span_of.rs
+
+/Users/MichaelKuby/Documents/GitHub/CMPT383_ComparativeProgramming/Exercise_9/target/release/deps/memoffset-1bd1b96ba3c69249.d: /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/lib.rs /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/raw_field.rs /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/offset_of.rs /Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/span_of.rs
+
+/Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/lib.rs:
+/Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/raw_field.rs:
+/Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/offset_of.rs:
+/Users/MichaelKuby/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/span_of.rs:
