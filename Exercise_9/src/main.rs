@@ -1,21 +1,25 @@
 #[allow(unused_imports)]
 #[allow(dead_code)]
-//pub mod inventory;
-//pub mod primes;
+pub mod inventory;
+pub mod primes;
 pub mod sum;
 
+use inventory::*;
+
 fn main() {
-    let n = 200;
-    let vec : Vec<i64> = (1..=n).collect();
-    let sum = sum::sum_loop_index(&vec);
-    println!("{:?}", sum);
+    let items = vec![
+        InventoryItem::new(3, 1.0, "apple".to_string()),
+        InventoryItem::new(0, 2.0, "banana".to_string()),
+        InventoryItem::new(2, 3.0, "cherry".to_string()),
+    ];
 
-    let sum2 : i64 = sum::sum_loop_iter(&vec);
-    println!("{:?}", sum2);
+    let total = total_value(&items);
+    println!("Total value: {}", total);
 
-    let sum3: i64 = sum::sum_fold(&vec);
-    println!("{:?}", sum3);
+    let out_of_stock_items = out_of_stock(&items);
+    println!("Out of stock items: {:?}", out_of_stock_items);
 
-    let sum4: i64 = sum::sum_method(&vec);
-    println!("{:?}", sum4);
+    let exploded_items = explode(&items);
+    println!("Exploded items: {:?}", exploded_items);
 }
+
