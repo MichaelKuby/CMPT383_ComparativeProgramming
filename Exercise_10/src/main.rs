@@ -1,5 +1,6 @@
 mod dynamic;
 mod files;
+mod tests;
 
 use files::SummationError;
 use std::path::Path;
@@ -20,7 +21,9 @@ fn test_each_file(sum_file: fn(&Path) -> Result<i64, SummationError>) {
     );
 }
 
+
+
 fn main() {
     test_each_file(files::sum_file_1);
-    //test_each_file(files::sum_file_2);
+    test_each_file(files::sum_file_2);
 }
