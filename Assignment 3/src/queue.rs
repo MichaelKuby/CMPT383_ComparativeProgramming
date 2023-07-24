@@ -1,5 +1,7 @@
 use std::sync::mpsc;
+use std::sync::mpsc::RecvError;
 use std::thread;
+use spmc::Sender;
 
 pub trait Task {
     type Output: Send;
@@ -14,8 +16,9 @@ Represents a work queue that can be used to distribute tasks among multiple work
 collect their output.
 *************************************************************************************************
 
-Generic struct that takes a type parameter TaskType, which must implement Task and Send, and be
-'static. ('static represents the lifetime of the entire program. Is created at compile time.)
+Struct that takes a generic type parameter TaskType. TaskType represents the type of tasks that
+can be enqueued and processed. TaskType must implement Task and Send, and be 'static.
+'static represents the lifetime of the entire program. Is created at compile time.
  */
 pub struct WorkQueue<TaskType: 'static + Task + Send> {
     // Option because it will be set to None to close the queue
@@ -66,12 +69,29 @@ impl<TaskType: 'static + Task + Send> WorkQueue<TaskType> {
         // TODO: the main logic for a worker thread
         loop {
             let task_result = recv_tasks.recv();
-            todo!(); // task_result will be Err() if the spmc::Sender has been destroyed and no more messages can be received here
+            match task_result {
+                Ok(task) => {
+                    // Do something with the task
+                    let possible_task = task.run();
+                    match possible_task {
+                        None => {return} // Ignore and continue processing
+                        Some(t) => {send_output.send(t).unwrap();}
+                    }
+                },
+                Err(_) => {
+                    // task_result will be Err() if the spmc::Sender has been destroyed
+                    // and no more messages can be received here
+                    return
+                }
+            };
         }
     }
 
     pub fn enqueue(&mut self, t: TaskType) -> Result<(), spmc::SendError<TaskType>> {
-        todo!(); // send this task to a worker
+        match &mut self.send_tasks {
+            None => Err(spmc::SendError(t)),
+            Some(s) => s.send(t),
+        }
     }
 
     // Helper methods that let you receive results in various ways
@@ -95,9 +115,21 @@ impl<TaskType: 'static + Task + Send> WorkQueue<TaskType> {
 
     pub fn shutdown(&mut self) {
         // Destroy the spmc::Sender so everybody knows no more tasks are incoming;
-        // drain any pending tasks in the queue; wait for each worker thread to finish.
-        // HINT: Vec.drain(..)
-        todo!(); //
+        self.send_tasks = None;
+
+        // drain any pending tasks in the queue
+        loop {
+            let res = self.recv_tasks.recv();
+            match res {
+                Ok(_) => {} // continue
+                Err(_) => {break}
+            }
+        }
+
+        // Drain self.workers, join and discard
+        for handle in self.workers.drain(..) {
+            handle.join().unwrap();
+        }
     }
 }
 
