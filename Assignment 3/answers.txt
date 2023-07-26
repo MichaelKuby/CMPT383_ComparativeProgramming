@@ -1,0 +1,42 @@
+1. In the Task trait definition, the type Output is specified as Send.
+What does this do, and why is this necessary?
+
+Send is a trait used to indicate that a type can be safely communicated between threads.
+Specifying 'Output: Send' specifically specifies that, when run, the output produced by
+the task be a type that also implements the 'Send' trait, so that the value produced
+by the thread can then be communicated through a channel.
+
+It's necessary because the compiler needs to be sure that the results communicated
+between threads are 'Send'able. Without requiring that the Task trait have output that is
+Send, the compiler cannot be sure that the type being communicated is free from data races,
+or may have some memory management safety concerns.
+
+2. The hint for .shutdown suggests using a vector's .drain method.
+Why can we not iterate with .iter() like usual?
+
+From what I can gather, it would be possible to use .into_iter() because
+it consumes each element of the collection, in this case the threads themselves. In the
+case of .iter() however, we are returned a regular iterator over the collection, so we
+cannot remove or change the elements because we only have a reference to them. Hence,
+when we .join().upwrap() their values, they simply begin again in their loop, searching
+for more work to do. Any work done on the threads while using the iterator in this case
+will leave the original collection of threads intact.
+
+.drain() on the other hand is designed specifically for the task of consuming and
+discarding of concurrently running threads. We take ownership over them, access their
+values if we so please, and then discard of them.
+
+3. Why must we .clone the Block when we put it in the Arc? Why not Arc<&Block>?
+
+First note that Arc is used to share the data encapsulated by the 'Block' between
+multiple threads. Arc shares this data immutably, and takes ownership over the data
+that it shares.
+
+Why do we need to clone it? Consider what happens when we try to send a reference to
+the block &Block: Since we are sharing the 'Block' to multiple threads, one of those threads
+may find Some(p) while others continue to look for it. When this happens, the thread owning
+Block might receive that result (Some(p)), continue program execution, and have Block fall
+out of scope before the others finish looking. At that point, the threads referencing Block
+would have outlived Block itself. This could lead to undefined behaviour. Rust prevents this
+by requiring that we send the ownership of a value itself through Arc. And since
+we need to send this ownership many times, we need to .clone the 'Block'.

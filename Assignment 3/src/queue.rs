@@ -66,16 +66,17 @@ impl<TaskType: 'static + Task + Send> WorkQueue<TaskType> {
     }
 
     fn run(recv_tasks: spmc::Receiver<TaskType>, send_output: mpsc::Sender<TaskType::Output>) {
-        // TODO: the main logic for a worker thread
+        /* What should a thread be doing? Looking for tasks that were enqueued by the producer until
+        the producer is destroyed.  */
         loop {
             let task_result = recv_tasks.recv();
             match task_result {
                 Ok(task) => {
                     // Do something with the task
-                    let possible_task = task.run();
-                    match possible_task {
-                        None => {return} // Ignore and continue processing
-                        Some(t) => {send_output.send(t).unwrap();}
+                    let result = task.run();
+                    match result {
+                        None => {} // Ignore and continue processing
+                        Some(t) => { send_output.send(t).unwrap();}
                     }
                 },
                 Err(_) => {

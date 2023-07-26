@@ -1,4 +1,2 @@
-// pub mod block;
-// mod block_tests;
+pub mod block;
 pub mod queue;
-mod queue_tests;
